@@ -1,6 +1,19 @@
-# Election Results Management System
+# ElectiSync – Election Data Analytics Hub 🗳️ (Bincom Test)
 
-A multi-tab web application designed to visualize and manage election results from a relational database. This project was developed as part of a technical assessment to demonstrate proficiency in **SQL aggregation**, **database migration**, and **full-stack Python development**.
+**ElectiSync** is a Python-powered analytics tool for managing and visualizing election data, from individual polling units to entire local government regions.
+
+## 🚀 Technical Highlights
+- **Migration Pipeline:** Custom Regex logic to convert legacy MySQL dumps into portable SQLite databases.
+- **Relational Aggregations:** Complex SQL JOINs to sum results across geographical hierarchies.
+- **Reactive UI:** Tabbed dashboard for real-time data fetching and visualization.
+
+## 🛠️ Tech Stack
+- **Dashboard:** Streamlit
+- **Data Wrangling:** Pandas
+- **Backend/DB:** Python, SQLite3
+- **Logic:** Regex (`re`) for automated SQL sanitization.
+
+
 
 ## 🚀 Features
 * **Task 1: Polling Unit Viewer** – Instant retrieval of party scores for any specific polling unit.
@@ -9,11 +22,9 @@ A multi-tab web application designed to visualize and manage election results fr
 * **Automated Migration** – Custom script to clean MySQL syntax and initialize a local SQLite database.
 
 ## 🛠️ Setup Instructions
-
-### 1. Initialize the Database
-Before running the app, you must convert the raw SQL dump into a SQLite database:
-Bash
-python init_db.py
+1. **Prepare Database:**
+   ```bash
+   python _init_.py
 
 This will create election_results.db in your folder.
 
@@ -46,3 +57,6 @@ SQL Injection Prevention: Uses parameterized queries (?) for all user inputs.
 Performance: Aggregations (SUM/GROUP BY) are handled at the database level for speed.
 
 Architecture: Follows a clean separation of concerns between the UI (app.py) and the logic (model.py).
+
+## Author
+Abdulazeez Abdulakeem 
